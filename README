@@ -1,0 +1,5 @@
+### Kafkorama portal deployment
+
+1. run `run.sh` script
+
+2. browse to url http://127.0.0.1:8080 (user: admin@admin.com , password: password)
