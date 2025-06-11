@@ -5,8 +5,6 @@ out/
 bin/
 questdb/*
 memory
-docker/services-config/migratorydata1/extensions/all-extensions.jar
-docker/services-config/migratorydata2/extensions/all-extensions.jar
 *.jks
 *.csr
 *.key
@@ -16,5 +14,6 @@ docker/services-config/migratorydata2/extensions/all-extensions.jar
 .config
 .dbus
 
-push-cloud.db*
-data/db/push-cloud.db*
+kafkorama-portal.db*
+data/db/kafkorama-portal.db*
+.DS_Store

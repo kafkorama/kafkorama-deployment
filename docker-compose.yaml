@@ -23,7 +23,7 @@ services:
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: true
 
   kafkorama-gateway:
-    image: kafkorama/kafkorama-gateway:latest
+    image: kafkorama/kafkorama-gateway:6.0.23
     restart: always
     ports:
       - "8800:8800"
@@ -32,11 +32,11 @@ services:
     networks:
       - local-network
     volumes:
-      - ./gateway/addons/authorization-hub/configuration.properties:/migratorydata/addons/authorization-hub/configuration.properties
-      - ./gateway/migratorydata.conf:/migratorydata/migratorydata.conf
+      - ./kafkorama-gateway/addons/authorization-portal/configuration.properties:/kafkorama-gateway/addons/authorization-portal/configuration.properties
+      - ./kafkorama-gateway/kafkorama-gateway.conf:/kafkorama-gateway/kafkorama-gateway.conf
 
   kafkorama-portal:
-    image: kafkorama/kafkorama-portal:latest
+    image: kafkorama/kafkorama-portal:1.0.1
     restart: always
     depends_on:
       - kafkorama-gateway
@@ -45,8 +45,8 @@ services:
     networks:
       - local-network
     volumes:
-      - ./data/db:/hub/data
-      - ./portal/extension.conf:/hub/extension.conf
+      - ./data/db:/kafkorama-portal/data
+      - ./kafkorama-portal/kafkorama-portal.conf:/kafkorama-portal/kafkorama-portal.conf
 
   demo-stocks:
     image: kafkorama/demo-stocks:latest
