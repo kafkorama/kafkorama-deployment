@@ -23,7 +23,7 @@ services:
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: true
 
   kafkorama-gateway:
-    image: kafkorama/kafkorama-gateway:6.0.23
+    image: kafkorama/kafkorama-gateway:latest
     restart: always
     ports:
       - "8800:8800"
