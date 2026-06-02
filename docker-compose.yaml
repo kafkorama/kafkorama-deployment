@@ -36,7 +36,7 @@ services:
       - ./kafkorama-gateway/kafkorama-gateway.conf:/kafkorama-gateway/kafkorama-gateway.conf
 
   kafkorama-portal:
-    image: kafkorama/kafkorama-portal:1.0.3
+    image: kafkorama/kafkorama-portal:1.0.4
     restart: always
     depends_on:
       - kafkorama-gateway
@@ -49,7 +49,7 @@ services:
       - ./kafkorama-portal/kafkorama-portal.conf:/kafkorama-portal/kafkorama-portal.conf
 
   demo-stocks:
-    image: kafkorama/demo-stocks:1.0.1
+    image: kafkorama/demo-stocks:1.0.2
     restart: always
     depends_on:
       - kafkorama-gateway
@@ -63,7 +63,7 @@ services:
       - SYMBOLS=/kafkorama/demo/stocks/AWERQ,/kafkorama/demo/stocks/WERZF,/kafkorama/demo/stocks/QWZAF,/kafkorama/demo/stocks/TEYDF,/kafkorama/demo/stocks/TYUII,/kafkorama/demo/stocks/XCVSD,/kafkorama/demo/stocks/POUVB,/kafkorama/demo/stocks/TYEWD,/kafkorama/demo/stocks/WYWUI
 
   demo-traffic:
-    image: kafkorama/demo-traffic:1.0.1
+    image: kafkorama/demo-traffic:1.0.2
     restart: always
     depends_on:
       - kafkorama-gateway
@@ -76,7 +76,7 @@ services:
       - SUBJECT=/kafkorama/demo/traffic/brussels
 
   demo-cryptocurrency:
-    image: kafkorama/demo-cryptocurrency:1.0.1
+    image: kafkorama/demo-cryptocurrency:1.0.2
     restart: always
     depends_on:
       - kafkorama-gateway
@@ -89,7 +89,7 @@ services:
       - SUBJECT=/kafkorama/demo/cryptocurrency/rates
 
   demo-parking:
-    image: kafkorama/demo-parking:1.0.1
+    image: kafkorama/demo-parking:1.0.2
     restart: always
     depends_on:
       - kafkorama-gateway
@@ -102,7 +102,7 @@ services:
       - SUBJECT=/kafkorama/demo/parking
 
   demo-seismic:
-    image: kafkorama/demo-seismic:1.0.1
+    image: kafkorama/demo-seismic:1.0.2
     restart: always
     depends_on:
       - kafkorama-gateway
@@ -115,7 +115,7 @@ services:
       - SUBJECT=/kafkorama/demo/seismic/info
 
   demo-gamification:
-    image: kafkorama/demo-gamification:1.0.1
+    image: kafkorama/demo-gamification:1.0.2
     restart: always
     depends_on:
       - kafkorama-gateway
